@@ -1,0 +1,7 @@
+{
+  "name": "bolao-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
