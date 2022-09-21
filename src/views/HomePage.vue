@@ -1,17 +1,6 @@
 <template>
-  <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Blank</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
+  <ion-page>    
+    <ion-content>
     
       <div id="container">
         <strong>{{ projects }}</strong>
@@ -23,7 +12,7 @@
 
 <script>
 import { defineComponent, computed } from 'vue';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonContent, IonPage } from '@ionic/vue';
 import gql from 'graphql-tag'
 import { useQuery } from '@vue/apollo-composable'
 import { useStore } from '@/store/useStore'
@@ -43,10 +32,10 @@ export default defineComponent({
   name: 'HomePage',
   components: {
     IonContent,
-    IonHeader,
+    // IonHeader,
     IonPage,
-    IonTitle,
-    IonToolbar
+    // IonTitle,
+    // IonToolbar,
   },
   setup() {
     const store = useStore()
