@@ -1,9 +1,9 @@
 <template>
   <ion-app>
-    <SideMenu />
+    <SideMenu v-if="store.getLogged" />
     <ion-router-outlet
       id="main-content"
-      :class="onIphone ? 'safari-view-container' : 'chrome-view-container'"
+      :class="store.getLogged ? (onIphone ? 'safari-view-container' : 'chrome-view-container') : ''"
     />
   </ion-app>
 </template>
@@ -11,8 +11,8 @@
 <script>
 import { defineComponent } from 'vue';
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
-import SideMenu from './components/SideMenu.vue'
-// import gql from 'graphql-tag'
+import SideMenu from './components/SideMenu.vue';
+import { useStore } from '@/store/useStore';
 
 export default defineComponent({
   name: 'App',
@@ -21,11 +21,18 @@ export default defineComponent({
     IonRouterOutlet,
     SideMenu,
   },
+  setup() {
+      const store = useStore()
+      return { store }
+  },
   data: () => ({
     onIphone: false,
   }),
   created() {
     this.checkBrowser()
+  },
+  updated() {
+    console.log(this.routeName);
   },
   methods: {
     checkBrowser() {
@@ -34,7 +41,7 @@ export default defineComponent({
         this.onIphone = true
       }
     }
-  }
+  },
   
 
 });

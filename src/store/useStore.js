@@ -2,17 +2,17 @@ import { defineStore } from 'pinia'
 
 export const useStore = defineStore('store', {
   state: () => ({
-    count: 0,
+    logged: true,
   }),
   getters: {
-    doubleCount: (state) => state.count * 2,
+    getLogged: (state) => state.logged,
   },
   actions: {
-    increment() {
-      this.count++
+    logIn() {
+      this.logged = true;
     },
-    randomizeCounter() {
-      this.count = Math.round(100 * Math.random())
+    logOut() {
+      this.logged = false;
     },
   },
 })
