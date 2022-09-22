@@ -1,39 +1,50 @@
 <template>
   <ion-app>
-    <ion-router-outlet />
+    <SideMenu />
+    <ion-router-outlet
+      id="main-content"
+      :class="onIphone ? 'safari-view-container' : 'chrome-view-container'"
+    />
   </ion-app>
 </template>
 
 <script>
-import { IonApp, IonRouterOutlet } from '@ionic/vue';
 import { defineComponent } from 'vue';
+import { IonApp, IonRouterOutlet } from '@ionic/vue';
+import SideMenu from './components/SideMenu.vue'
 // import gql from 'graphql-tag'
 
 export default defineComponent({
   name: 'App',
   components: {
     IonApp,
-    IonRouterOutlet
+    IonRouterOutlet,
+    SideMenu,
   },
-  // data: () => ({
-  //   project: null,
-  // }),
-  // apollo : {
-  //   projects: gql`query {
-  //     projects {
-  //       id
-  //       title
-  //       authors {
-  //         name
-  //       }
-  //     }
-  //   }`,
-  // },
-  // mounted() {
-  //   console.log('montou');
-  //   console.log('querie', this.$options.apollo.projects);
-  //   this.project = this.$options.apollo.projects
-  //   console.log('project', this.project);
-  // }
+  data: () => ({
+    onIphone: false,
+  }),
+  created() {
+    this.checkBrowser()
+  },
+  methods: {
+    checkBrowser() {
+      const userAgent = window.navigator.userAgent
+      if (userAgent.includes('iPhone')) {
+        this.onIphone = true
+      }
+    }
+  }
+  
+
 });
 </script>
+
+<style scoped>
+  .safari-view-container {
+    margin-top: 44px;
+  }
+  .chrome-view-container {
+    margin-top: 56px;
+  }
+</style>

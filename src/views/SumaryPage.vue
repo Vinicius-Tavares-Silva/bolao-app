@@ -42,12 +42,12 @@
 </template>
 
 <script>
-import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/vue';
+import { IonPage, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'SumaryPage',
-  components: { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle }
+  components: { IonPage, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle }
 });
 </script>
 

@@ -16,7 +16,6 @@
       </ion-list>
     </ion-content>
   </ion-menu>
-  <ion-page id="main-content">
     <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
@@ -25,7 +24,6 @@
         <ion-title>Bolão 2022</ion-title>
       </ion-toolbar>
     </ion-header>
-  </ion-page>
 </template>
 
 <script>

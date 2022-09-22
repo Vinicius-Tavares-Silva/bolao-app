@@ -72,11 +72,11 @@
 </template>
 
 <script>
-import { IonAccordionGroup, IonAccordion, IonItem, IonLabel } from '@ionic/vue';
+import { IonPage, IonContent, IonAccordionGroup, IonAccordion, IonItem, IonLabel } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'GroupPage',
-  components: { IonAccordionGroup, IonAccordion, IonItem, IonLabel }
+  components: { IonPage, IonContent, IonAccordionGroup, IonAccordion, IonItem, IonLabel }
 });
 </script>

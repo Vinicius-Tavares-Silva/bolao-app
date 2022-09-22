@@ -68,11 +68,11 @@
 </template>
 
 <script>
-import { IonList, IonItem, IonLabel } from '@ionic/vue';
+import { IonPage, IonContent, IonList, IonItem, IonLabel } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'GroupPage',
-  components: { IonList, IonItem, IonLabel }
+  components: { IonPage, IonContent, IonList, IonItem, IonLabel }
 });
 </script>

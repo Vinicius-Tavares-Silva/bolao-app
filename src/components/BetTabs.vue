@@ -1,6 +1,5 @@
 <template>
   <ion-page>
-    <SideMenu />
     <ion-content>
       <ion-tabs>
         <ion-router-outlet></ion-router-outlet>
@@ -34,7 +33,6 @@
     IonRouterOutlet,
   } from '@ionic/vue';
   import { ellipse, square, triangle } from 'ionicons/icons';
-  import SideMenu from './SideMenu'
 
   export default {
     name: 'HomeTabs',
@@ -47,7 +45,6 @@
       IonIcon,
       IonPage,
       IonRouterOutlet,
-      SideMenu
     },
     setup() {
       return {
