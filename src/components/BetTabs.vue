@@ -6,12 +6,12 @@
         <ion-tab-bar slot="bottom">
           
           <ion-tab-button tab="group" href="/bet/group">
-            <ion-icon :icon="triangle" />
+            <ion-icon :icon="albums" />
             <ion-label>Fase de Grupos</ion-label>
           </ion-tab-button>
 
           <ion-tab-button tab="playoff" href="/bet/playoff">
-            <ion-icon :icon="ellipse" />
+            <ion-icon :icon="shuffle" />
             <ion-label>Mata-Mata</ion-label>
           </ion-tab-button>
 
@@ -32,7 +32,7 @@
     IonPage,
     IonRouterOutlet,
   } from '@ionic/vue';
-  import { ellipse, square, triangle } from 'ionicons/icons';
+  import { albums, shuffle } from 'ionicons/icons';
 
   export default {
     name: 'HomeTabs',
@@ -48,9 +48,8 @@
     },
     setup() {
       return {
-        ellipse,
-        square,
-        triangle,
+        albums,
+        shuffle
       };
     },
   };

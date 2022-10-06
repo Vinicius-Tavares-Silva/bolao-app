@@ -6,12 +6,12 @@
         <ion-tab-bar slot="bottom">
           
           <ion-tab-button tab="sumary" href="/home/sumary">
-            <ion-icon :icon="triangle" />
+            <ion-icon :icon="calendar" />
             <ion-label>Resumo</ion-label>
           </ion-tab-button>
 
           <ion-tab-button tab="scoreboard" href="/home/scoreboard">
-            <ion-icon :icon="ellipse" />
+            <ion-icon :icon="list" />
             <ion-label>Classificação</ion-label>
           </ion-tab-button>
 
@@ -32,7 +32,7 @@
     IonPage,
     IonRouterOutlet,
   } from '@ionic/vue';
-  import { ellipse, square, triangle } from 'ionicons/icons';
+  import { calendar, list } from 'ionicons/icons';
 
   export default {
     name: 'HomeTabs',
@@ -48,9 +48,8 @@
     },
     setup() {
       return {
-        ellipse,
-        square,
-        triangle,
+        calendar,
+        list
       };
     },
   };
