@@ -40,7 +40,8 @@
     IonToolbar,
     IonItem,
     IonLabel,
-    IonList
+    IonList,
+    IonIcon,
   } from '@ionic/vue';
   import { home, dice } from 'ionicons/icons';
 
@@ -56,7 +57,8 @@
       IonToolbar,
       IonItem,
       IonLabel,
-      IonList
+      IonList,
+      IonIcon,
     },
     setup() {
       return {
