@@ -24,7 +24,6 @@
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title>Bolão 2022</ion-title>
-        <img src="../assets/flags/ale.png" alt="">
       </ion-toolbar>
     </ion-header>
 </template>
