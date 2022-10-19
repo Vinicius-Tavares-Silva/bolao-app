@@ -90,7 +90,7 @@
                   <!-- <ion-label position="floating">
                     Catar
                   </ion-label> -->
-                  <vue-number-input v-model="value" :min="0" :max="10" inline controls size="small" placeholder="Catar" class="ion-no-padding" ></vue-number-input>
+                  <vue-number-input v-model="valueA" :min="0" :max="10" controls size="small" placeholder="Catar"></vue-number-input>
                 </ion-item>
                 <!-- <ion-item>
                   
@@ -103,12 +103,50 @@
              <ion-col size="6" class="ion-padding-top">
                 <ion-item lines="none" class="ion-no-padding">
                   <ion-avatar class="flag-avatar" slot="end">
-                    <img src="../assets/flags/cat.png" alt="">
+                    <img src="../assets/flags/sen.png" alt="">
                   </ion-avatar>
                   <!-- <ion-label position="floating">
                     Catar
                   </ion-label> -->
-                  <vue-number-input v-model="value" :min="0" :max="10" inline controls size="small" placeholder="Catar" ></vue-number-input>
+                  <vue-number-input v-model="valueB" :min="0" :max="10" controls size="small" placeholder="Senegal"></vue-number-input>
+                </ion-item>
+                <!-- <ion-item>
+                  
+                  <vue-number-input v-model="value" :min="1" :max="10" inline controls size="small" ></vue-number-input>
+                  <ion-input type="number"></ion-input>
+                  <ion-label>Equador</ion-label>
+                  <img class="flag-logo ion-margin-start" src="../assets/flags/equ.png" alt="">
+                </ion-item> -->
+             </ion-col>
+            </ion-row>
+            <ion-row>
+             <ion-col size="6" class="ion-padding-top">
+                <ion-item lines="none" class="ion-no-padding">
+                  <ion-avatar class="flag-avatar ion-no-padding" slot="start">
+                    <img src="../assets/flags/hol.png" alt="">
+                  </ion-avatar>
+                  <!-- <ion-label position="floating">
+                    Catar
+                  </ion-label> -->
+                  <vue-number-input v-model="valueC" :min="0" :max="10" controls size="small" placeholder="Holanda"></vue-number-input>
+                </ion-item>
+                <!-- <ion-item>
+                  
+                  <vue-number-input v-model="value" :min="1" :max="10" inline controls size="small" ></vue-number-input>
+                  <ion-input type="number"></ion-input>
+                  <ion-label>Equador</ion-label>
+                  <img class="flag-logo ion-margin-start" src="../assets/flags/equ.png" alt="">
+                </ion-item> -->
+             </ion-col>
+             <ion-col size="6" class="ion-padding-top">
+                <ion-item lines="none" class="ion-no-padding">
+                  <ion-avatar class="flag-avatar" slot="end">
+                    <img src="../assets/flags/equ.png" alt="">
+                  </ion-avatar>
+                  <!-- <ion-label position="floating">
+                    Catar
+                  </ion-label> -->
+                  <vue-number-input v-model="valueD" :min="0" :max="10" controls size="small" placeholder="Equador"></vue-number-input>
                 </ion-item>
                 <!-- <ion-item>
                   
@@ -223,7 +261,10 @@ export default defineComponent({
     IonAvatar,
   },
   data: () => ({
-    value: null,
+    valueA: null,
+    valueB: null,
+    valueC: null,
+    valueD: null,
   }),
 });
 </script>
